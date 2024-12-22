@@ -1,19 +1,23 @@
 ```
 test/
-│
-├── app/
-│   ├── __init__.py
-│   ├── routes.py
-│   ├── models.py
-│   ├── templates/
-│   │   └── board.html
-│   └── static/
-│       └── style.css
-│
-├── instance/
-│   └── my_database.db
-│
-├── run.py
+├── README.md
+├── app.py
+├── blog.db
+├── instance
+│   └── blog.db
 ├── requirements.txt
-└── README.md
+├── static
+│   └── css
+│       └── styles.css
+├── templates
+│   ├── getdata.html
+│   ├── index.html
+│   ├── layout.html
+│   ├── purge.html
+│   └── postdata.html
+├── config.py
+├── models.py
+├── routes.py
+└── __init__.py
+
 ```
