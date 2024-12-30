@@ -1,23 +1,63 @@
-```
-test/
-├── README.md
-├── app.py
-├── blog.db
-├── instance
-│   └── blog.db
-├── requirements.txt
-├── static
-│   └── css
-│       └── styles.css
-├── templates
-│   ├── getdata.html
-│   ├── index.html
-│   ├── layout.html
-│   ├── purge.html
-│   └── postdata.html
-├── config.py
-├── models.py
-├── routes.py
-└── __init__.py
+ # Телефонная книга
+
+## Структура проекта
 
 ```
+.
+├── README.md                   # Основной файл документации
+├── app.py                      # Основной файл приложения
+├── config                      # Директория с конфигурационными файлами
+│   ├── init.py             # Инициализация пакета config
+│   └── config.py               # Конфигурационные настройки
+├── instance                     # Директория для хранения базы данных
+│   └── data.db                 # Файл базы данных
+├── models.py                   # Модели данных
+├── requirements.txt            # Файл с зависимостями проекта
+├── routes                      # Директория с маршрутами
+│   ├── init.py             # Инициализация пакета routes
+│   ├── api.py                 # API маршруты
+│   └── main.py                # Основные маршруты
+├── static                      # Статические файлы
+│   ├── js                      # JavaScript файлы
+│   │   ├── board.js            # JavaScript для страницы board
+│   │   └── index.js            # JavaScript для главной страницы
+│   └── style.css               # CSS стили
+├── templates                    # HTML шаблоны
+│   ├── base.html               # Базовый шаблон
+│   ├── board.html              # Шаблон для страницы board
+│   └── index.html              # Шаблон для главной страницы
+└── utils                       # Вспомогательные функции
+├── init.py              # Инициализация пакета utils
+└── helpers.py               # Вспомогательные функции
+```
+
+## Установка
+
+1. Клонируйте репозиторий:
+   ```
+   bash
+   git clone <repository_url>
+   cd <repository_name>
+   ```
+
+Создайте виртуальное окружение и активируйте его:
+
+```
+python -m venv .venv
+```
+source venv/bin/activate
+Установите зависимости:
+
+```
+pip install -r requirements.txt
+```
+
+Запустите приложение:
+
+```
+python app.py
+```
+
+Использование
+Откройте браузер и перейдите по адресу http://127.0.0.1:5000/ для проверки главной страницы.
+Перейдите по адресу http://127.0.0.1:5000/board для проверки страницы телефонной книги.
