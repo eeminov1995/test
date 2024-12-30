@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-center mb-4">JSON</h1>
+<div class="card mb-3">
+    <div class="card-body">
+        <pre id="data-board" class="bg-light p-3"></pre>
+    </div>
+</div>
+<button id="purge-button" class="btn btn-danger" style="margin-top: 20px;">Очистить данные</button>
+
+<script src="{{ url_for('static', filename='js/board.js') }}"></script>
+{% endblock %}

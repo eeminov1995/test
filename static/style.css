@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Добавляем отступ для кнопки */
+.container #purge-button {
+    margin-top: 20px; /* Вы можете изменить это значение по своему усмотрению */
+}
+
+/* Стили для футера */
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

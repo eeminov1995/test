@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Телефонная книга</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Добавляем стили для Flexbox */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        #page-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        #content-wrap {
+            flex: 1 0 auto; /* Это позволяет контенту занимать оставшееся пространство */
+        }
+    </style>
+</head>
+<body>
+    <div id="page-container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('main.home') }}">Добавить контакт</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('main.board') }}">JSON</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="content-wrap" class="container mt-5 mb-5">
+            {% block content %}{% endblock %}
+        </div>
+
+        <!-- Добавляем футер -->
+        <footer class="footer py-3 bg-dark text-white text-center">
+            <div class="container">
+                <span class="text-muted">&copy; 2024 Телефонная книга. Все права защищены.</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
