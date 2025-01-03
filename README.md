@@ -43,7 +43,7 @@ cd test
 python -m venv .venv
 ```
 ```
-source venv/bin/activate
+source .venv/bin/activate
 ```
 Установите зависимости:
 ```
@@ -51,7 +51,7 @@ pip install -r requirements.txt
 ```
 Запустите приложение:
 ```
-python app.py
+.venv/bin/python app.py
 ```
 Использование:
 
