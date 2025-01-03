@@ -35,7 +35,6 @@
 
 Клонируйте репозиторий:
 ```
-bash
 git clone https://github.com/eeminov1995/test.git
 cd test
 ```
