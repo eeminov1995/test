@@ -36,8 +36,8 @@
 Клонируйте репозиторий:
 ```
 bash
-git clone <repository_url>
-cd <repository_name>
+git clone https://github.com/eeminov1995/test.git
+cd test
 ```
 Создайте виртуальное окружение и активируйте его:
 ```
