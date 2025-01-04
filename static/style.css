@@ -30,3 +30,18 @@ pre {
     bottom: 0;
     width: 100%;
 }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .card {
+        margin-bottom: 10px;
+    }
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+    .footer {
+        padding: 10px;
+    }
+}

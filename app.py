@@ -23,17 +23,25 @@ app.register_blueprint(api)
 def after_request(response):
     return add_header(response)
 
-# Настройка логирования
 if not app.debug:
     if not os.path.exists('logs'):
         os.mkdir('logs')
-    file_handler = RotatingFileHandler('logs/app.log', maxBytes=10 * 1024 * 1024, backupCount=1)
-    file_handler.setFormatter(logging.Formatter(
+
+    info_file_handler = RotatingFileHandler('logs/app.log', maxBytes=10 * 1024 * 1024, backupCount=1)
+    info_file_handler.setFormatter(logging.Formatter(
         '%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d] [IP: %(client_ip)s]'
     ))
-    file_handler.setLevel(logging.INFO)
-    file_handler.addFilter(RequestFilter())
-    app.logger.addHandler(file_handler)
+    info_file_handler.setLevel(logging.INFO)
+    info_file_handler.addFilter(RequestFilter())
+    app.logger.addHandler(info_file_handler)
+    error_file_handler = RotatingFileHandler('logs/error.log', maxBytes=10 * 1024 * 1024, backupCount=1)
+    error_file_handler.setFormatter(logging.Formatter(
+        '%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d] [IP: %(client_ip)s]'
+    ))
+    error_file_handler.setLevel(logging.ERROR)
+    error_file_handler.addFilter(RequestFilter())
+    app.logger.addHandler(error_file_handler)
+
     app.logger.setLevel(logging.INFO)
     app.logger.info('App startup')
 
