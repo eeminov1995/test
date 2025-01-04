@@ -31,17 +31,10 @@ pre {
     width: 100%;
 }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-    .card {
-        margin-bottom: 10px;
-    }
-    .navbar-nav .nav-item {
-        margin-bottom: 10px;
-    }
-    .footer {
-        padding: 10px;
-    }
+/* Стили для кнопок с эффектом нажатия */
+.btn-press {
+    transition: transform 0.2s;
+}
+.btn-press:active {
+    transform: scale(0.95);
 }
