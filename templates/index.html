@@ -23,10 +23,20 @@
             </div>
             <button type="submit" class="btn btn-primary btn-press">Отправить</button>
         </form>
-        <button id="test-button" class="btn btn-secondary btn-press">Тест</button>
+        <button id="test-button" class="btn btn-secondary btn-press">Тест</button><br>
+        <button id="purge-button" class="btn btn-danger btn-press mt-3">Очистить данные</button>
+    </div>
+</div>
+
+<!-- Добавляем раздел для отображения данных -->
+<div class="card mt-5">
+    <div class="card-body">
+        <h2 class="text-center mb-4">Все контакты</h2>
+        <ul id="contacts-list" class="list-group">
+            <!-- Контакты будут отображаться здесь -->
+        </ul>
     </div>
 </div>
 
 <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 {% endblock %}
-
