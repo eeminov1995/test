@@ -38,3 +38,11 @@ pre {
 .btn-press:active {
     transform: scale(0.95);
 }
+
+/* Дополнительные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .btn-press:active {
+        transform: scale(0.9);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+}
